@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Website Background Gradient
+  CSS usage:
+    background-image: url('background-gradient.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; (optional, for parallax feel)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Vertical sweep: dark tones at top, fully white across the entire bottom edge -->
+    <linearGradient id="main" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#000000"/>
+      <stop offset="15%" stop-color="#534f4d"/>
+      <stop offset="38%" stop-color="#665f5d"/>
+      <stop offset="62%" stop-color="#BFA798"/>
+      <stop offset="82%" stop-color="#CBAF9D"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <!-- Warm luminosity accent in the upper/dark region -->
+    <radialGradient id="warmGlow" cx="960" cy="260" r="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#BFA798" stop-opacity="0.52"/>
+      <stop offset="55%"  stop-color="#534f4d" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Base gradient layer -->
+  <rect width="1920" height="1080" fill="url(#main)"/>
+  <!-- Warm depth layer -->
+  <rect width="1920" height="1080" fill="url(#warmGlow)"/>
+</svg>

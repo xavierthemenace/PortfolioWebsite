@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Xavier's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            padding: 250px 0;
+            border: 1px solid black;
+            border-bottom-left-radius: 36px;
+            border-bottom-right-radius: 36px;
+            background: linear-gradient(180deg, rgba(12, 7, 20, 0.2) 0%, rgba(43, 20, 73, 0.35) 45%, rgba(43, 20, 73, 0.95) 100%);
+            color: #ffffff;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .space-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse 60% 45% at 22% 28%, rgba(139, 92, 246, 0.16), transparent 70%),
+                radial-gradient(ellipse 50% 40% at 78% 68%, rgba(107, 63, 160, 0.14), transparent 70%),
+                linear-gradient(180deg, #0c0714 0%, #150c26 55%, #1a0f2e 100%);
+            overflow: hidden;
+        }
+
+        .stars {
+            position: absolute;
+            inset: 0;
+            background-repeat: repeat;
+        }
+
+        .stars--near {
+            background-image: radial-gradient(1.6px 1.6px at 50% 50%, #d8c9ff 50%, transparent 51%);
+            background-size: 180px 180px;
+            opacity: 0.85;
+            animation: drift 90s linear infinite;
+        }
+
+        .stars--mid {
+            background-image: radial-gradient(1.2px 1.2px at 50% 50%, #d8c9ff 50%, transparent 51%);
+            background-size: 260px 260px;
+            background-position: 40px 90px;
+            opacity: 0.5;
+            animation: drift 140s linear infinite reverse;
+        }
+
+        .stars--far {
+            background-image: radial-gradient(1px 1px at 50% 50%, #d8c9ff 50%, transparent 51%);
+            background-size: 340px 340px;
+            background-position: 120px 30px;
+            opacity: 0.3;
+            animation: drift 220s linear infinite;
+        }
+
+        @keyframes drift {
+            from { transform: translate3d(0, 0, 0); }
+            to { transform: translate3d(-300px, 200px, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .stars--near, .stars--mid, .stars--far {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav">
+      <h2>Xavier Mbajika</h2>
+    </nav>
+    </header>
+        <div id="navbar"> 
+    <ul>
+            
+            <li id="first"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li id="last"><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+  </header>
+    <div class="hero" style="height: 80px;">
+        <div class="space-bg" aria-hidden="true">
+            <div class="stars stars--far"></div>
+            <div class="stars stars--mid"></div>
+            <div class="stars stars--near"></div>
+        </div>
+    <h1 class="Who">Who Am I?</h1>
+            <h2 class="subtitle">A quick overview of me and my story.</h2>
+    </div> 
+    <div id="container">
+        <div class="img">
+            <img src="Screenshot_20251125_195750_Photos.jpg" alt="Young Xavier" id = "young-x">
+        </div>
+        <div class="main-content">
+            <h3 id="about">About Xavier</h3> 
+            <p style="position: relative; top: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reprehenderit voluptas quo. Nesciunt eius nam voluptates veritatis, quae animi unde aliquid repellendus. Voluptas veritatis, aperiam quia temporibus similique est assumenda deserunt labore ipsam alias? Nemo dolore nobis autem adipisci saepe ipsum, soluta fugiat ad repudiandae et est quasi vero sapiente.</p>   
+        </div>
+    </div>
+    <footer>
+        <p>© 2026 Xavier Mbajika. All rights reserved.</p>
+    </footer>
+</body>

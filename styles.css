@@ -118,6 +118,7 @@ p {
     border-top: 24px;
     padding-top: 4px;
     padding-bottom: 54px;
+    
 
 }
 
@@ -132,6 +133,7 @@ aside {
     overflow: hidden;
     border-width: 30px;
     height: 150px;
+    margin: 16px;
 }
 #mission {
     text-align: center;
@@ -201,4 +203,7 @@ h3 {
 }
 #container {
     display: flex;
+}
+.description { 
+    font-size: 19px;
 }

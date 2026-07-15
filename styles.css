@@ -1,3 +1,13 @@
+@keyframes slideUpAnimation {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeftAnimation {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
 
 header {
     background-color: #000000;
@@ -7,6 +17,10 @@ header {
     padding: 0;
     margin: 0;
     color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
 }
     
 
@@ -31,9 +45,19 @@ body {
     top: 47px;
     z-index: 6;
     overscroll-behavior: none;
+    padding-top: 8px;
+    background-color: black;
+    text-align: center;
+    
 }
 #navbar ul{
     list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 300px;
+    
+    
 
 }
 
@@ -42,8 +66,8 @@ body {
     margin: 0;
     padding: 10px;
     border: 1px solid #000000;
-    margin-left: -5px;
     background-color: #000000;
+    
  }
 
 #navbar #first{
@@ -54,6 +78,7 @@ body {
     display: inline-block;
     text-decoration: none;
     color: #ffffff;
+    padding-left: 0px;
 }
 
 nav h2 {
@@ -64,9 +89,7 @@ nav h2 {
     background-color: gold;
    
 }
-#last {
-    border-bottom-right-radius: 16px; 
-}
+
 .hero {
     text-align: center;
     position: relative;
@@ -78,7 +101,7 @@ nav h2 {
     padding-bottom: 500px;
     padding: 250px 0;
     position: relative;
-    top: -40px;
+    top: -120px;
     border: 1px solid black;
     border-bottom-left-radius: 36px;
     border-bottom-right-radius: 36px;
@@ -104,25 +127,34 @@ p {
     color: #000000;
 }
 
-#preview {
-    text-align: center;
-    position: relative;
-    top: -20px;
 
-}
 #skills {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    border-top: 24px;
-    padding-top: 4px;
-    padding-bottom: 54px;
-    
+    position: relative;
+    bottom: 72px;
+    border-top: 8px;
+    padding-top: 0px;
+    padding-bottom: 12px;
+    opacity: 0;
+}
 
+
+#skills.scroll-activated {
+    animation-name: slideUpAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+
+    opacity: 100;
 }
 
 aside {
+    opacity: 100;
     display: inline-block;
     padding: 32px;
     align-items: center;
@@ -136,11 +168,27 @@ aside {
     margin: 16px;
 }
 #mission {
+   
     text-align: center;
     position: relative;
     top: 8px;
+    
+
+    opacity: 0;
+}
+
+#mission.scroll-activated {
+    animation-name: slideUpAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+
     border: 1px solid black;
     border-top: 24px;
+
+    opacity: 100;
 }
 
 #drive {
@@ -148,7 +196,19 @@ aside {
     padding: 64px;
 }
 
+#contact.scroll-activated {
+    animation-name: slideUpAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+
+    opacity: 100;
+}
+
 #contact {
+    
     text-align: center;
     position: relative;
     top: 32px;
@@ -156,6 +216,8 @@ aside {
     border-radius: 12px;
     padding: 50px;
     margin: 50px;
+
+    opacity: 0;
 }
 .strikeout {
     text-decoration: line-through;
@@ -191,7 +253,6 @@ footer {
     border-radius: 16px;
 }
 .main-content {
-    border: 1px solid black;
     width: 1200px;
     border-radius: 16px;
     display: inline-block;
@@ -203,6 +264,9 @@ h3 {
 }
 #container {
     display: flex;
+    border: 2px solid black;
+    border-radius: 12px;
+    border-left: 16px;
 }
 .description { 
     font-size: 19px;

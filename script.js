@@ -14,11 +14,46 @@ window.addEventListener("scroll", () => {
         
     } 
 
-    if (window.scrollY > 300) {
+    if (window.scrollY > 500) {
 
         missionStatement.classList.add("scroll-activated")
     }
-    if (window.scrollY > 550) {
+    if (window.scrollY > 1000) {
          contactDiv.classList.add("scroll-activated")
     }
-});
+})
+function sleep(ms){
+    return new Promise((resolve => setTimeout(resolve, ms)));
+}
+const phrases = ["an entrepreneur", "a innovator", "a leader", "a thinker", "a people person"];
+const el = document.getElementById("typewriter")
+
+let sleepTime = 100;
+
+let curPhraseIndex = 0;
+
+const writeLoop = async () => {
+    while (true) {
+        let curWord = phrases[curPhraseIndex];
+        for (let i = 0; i < curWord.length; i++) {
+            el.innerText = curWord.substring(0, i + 1);
+            await sleep(sleepTime);
+        }       
+         await sleep(sleepTime * 10);
+
+         for (let i = curWord.length; i > 0; i--) {
+            el.innerText = curWord.substring(0, i - 1);
+            await sleep(sleepTime);
+         }
+         
+         await sleep(sleepTime * 5);
+
+         if (curPhraseIndex === phrases.length - 1) {
+            curPhraseIndex = 0;
+         } else {
+            curPhraseIndex++;
+         }
+    }
+};
+
+writeLoop();

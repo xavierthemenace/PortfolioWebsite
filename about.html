@@ -17,7 +17,11 @@
             position: relative;
             overflow: hidden;
             isolation: isolate;
-            padding: 250px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 320px;
+            padding: 120px 20px;
             border: 1px solid black;
             border-bottom-left-radius: 36px;
             border-bottom-right-radius: 36px;
@@ -29,6 +33,8 @@
             position: relative;
             z-index: 1;
             text-align: center;
+            max-width: 700px;
+            width: 100%;
         }
 
         .space-bg {
@@ -99,23 +105,27 @@
         </ul>
       </div>
   </header>
-    <div class="hero" style="height: 80px;">
+    <div class="hero">
         <div class="space-bg" aria-hidden="true">
             <div class="stars stars--far"></div>
             <div class="stars stars--mid"></div>
             <div class="stars stars--near"></div>
-            <h2 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; text-align: center; width: 100%;">About Me</h2>
         </div>
-    <h1 class="Who">Who Am I?</h1>
+        <div class="hero-content">
+            <p class="eyebrow">About Me</p>
+            <h1 class="Who">Who Am I?</h1>
             <h2 class="subtitle">A quick overview of me and my story.</h2>
+        </div>
     </div> 
     <div id="container">
-        <div class="img">
-            <img src="Screenshot_20251125_195750_Photos.jpg" alt="Young Xavier" id = "young-x">
-        </div>
-        <div class="main-content">
-            <h3 id="about">About Xavier</h3> 
-            <p style="position: relative; top: 50px;">Born in Port Harcourt, Nigeria, I got used to moving around a lot. I spent my years as a child moving from England, New York, Ohio, Oklahoma, and finally California, where I call home now. From a young age, I've been a very imaginative person. That desire to create bleeds into my life now. Through the Hidden Genius Project, I'm learning to think like an entrepreneur, apply my technical skills, and serve the community. In my passions to become an engineer, I'm learning how to develop hardware to solve real-world problems and create beneficial change within the places we call home. With technology, there's a whole different realm of opportunities to change the world with technology. I want to be a factor that takes these opportunities and bring them into fruition.</p>   
+        <div class="about-showcase">
+            <div class="about-photo-card">
+                <img src="Screenshot_20251125_195750_Photos.jpg" alt="Young Xavier" id="young-x">
+            </div>
+            <div class="about-text-card">
+                <h3 id="about">About Xavier</h3> 
+                <p>Born in Port Harcourt, Nigeria, I got used to moving around a lot. I spent my years as a child moving from England, New York, Ohio, Oklahoma, and finally California, where I call home now. From a young age, I've been a very imaginative person. That desire to create bleeds into my life now. Through the Hidden Genius Project, I'm learning to think like an entrepreneur, apply my technical skills, and serve the community. In my passions to become an engineer, I'm learning how to develop hardware to solve real-world problems and create beneficial change within the places we call home. With technology, there's a whole different realm of opportunities to change the world with technology. I want to be a factor that takes these opportunities and bring them into fruition.</p>
+            </div>
         </div>
     </div>
     <footer>

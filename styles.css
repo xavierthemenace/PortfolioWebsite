@@ -246,12 +246,30 @@ aside:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.about-showcase {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
 .about-photo-card {
+    flex: 0 0 280px;
     padding: 16px;
 }
 
 .about-text-card {
+    flex: 1;
     padding: 32px;
+}
+
+#young-x {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 16px;
 }
 
 .about-text-card h3 {

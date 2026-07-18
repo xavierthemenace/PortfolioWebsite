@@ -1,6 +1,22 @@
 console.log("connected")
+const toggleBtn = document.getElementById("theme-toggle");
 
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    toggleBtn.innerText = "Dark Mode 🌙";
+}
 
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light");
+        toggleBtn.innerText = "Dark Mode 🌙";
+    } else {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.innerText = "Light Mode ☀️";
+    }
+});
 
 window.addEventListener("scroll", () => {
     // 1. Use querySelectorAll to easily loop, or index [0] if it is just one item
